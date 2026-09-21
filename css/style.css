@@ -114,7 +114,16 @@ button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 4p
 .flower-message__spark { position: absolute; left: 1rem; top: 1rem; color: var(--gold); text-shadow: 0 0 12px var(--gold); animation: twinkle 1.8s ease-in-out infinite; }
 
 .secondary-button { min-height: 48px; border-radius: 999px; padding: .78rem 1.15rem; font-size: .72rem; letter-spacing: .05em; color: rgba(255,255,255,.68); transition: opacity .7s ease, border-color .3s ease, color .3s ease, transform .3s ease; }
-.final-trigger { position: absolute; z-index: 8; right: var(--safe-right); bottom: var(--safe-bottom); opacity: .72; }
+.final-trigger {
+  position: absolute;
+  z-index: 8;
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: auto;
+  opacity: .72;
+}
+
+
 .final-trigger:hover, .final-trigger:focus-visible { opacity: 1; color: var(--white); border-color: rgba(255,222,106,.5); }
 .final-trigger:active { transform: scale(.97); }
 
@@ -160,7 +169,11 @@ button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 4p
   .mobile-hint { display: none; }
   .desktop-hint { display: inline; }
   .universe-ui { left: max(24px, env(safe-area-inset-left)); right: max(24px, env(safe-area-inset-right)); }
-  .final-trigger { right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); }
+  .final-trigger {
+  right: max(124px, env(safe-area-inset-right));
+  top: max(24px, env(safe-area-inset-top));
+  bottom: auto;
+}
   .flower-message { bottom: max(26px, env(safe-area-inset-bottom)); }
 }
 
