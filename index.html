@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#03060d">
+  <meta name="description" content="Un pequeño universo de flores amarillas creado especialmente para Verónica.">
+  <title>Flores amarillas — Para Verónica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <noscript>
+    <div class="noscript">Esta experiencia necesita JavaScript para hacer florecer el universo.</div>
+  </noscript>
+
+  <main id="experience" aria-label="Universo de flores amarillas">
+    <section id="intro" class="intro" aria-labelledby="intro-title">
+      <canvas id="intro-stars" class="intro-stars" aria-hidden="true"></canvas>
+      <div class="intro-nebula" aria-hidden="true"></div>
+
+      <div class="intro-copy">
+        <h1 id="intro-title" class="sr-only">Un universo para Verónica</h1>
+        <p class="intro-line intro-line--one">No te podré regalar flores amarillas por ahora...</p>
+        <p class="intro-line intro-line--two">pero solo espera lo inesperado.</p>
+        <p class="intro-line intro-line--three">Te quiero mucho, Verónica.<br><em>Mi niña. 💛</em></p>
+        <button id="enter-universe" class="primary-button intro-enter" type="button">
+          <span>Entrar a nuestro universo</span><span aria-hidden="true">✨</span>
+        </button>
+      </div>
+      <p class="intro-hint">Una pequeña carta hecha de luz</p>
+    </section>
+
+    <section id="universe-screen" class="universe-screen" aria-label="Universo interactivo" aria-hidden="true">
+      <canvas id="universe-canvas" aria-label="Sistema solar fantástico con flores amarillas holográficas"></canvas>
+      <div class="space-vignette" aria-hidden="true"></div>
+      <div class="scanlines" aria-hidden="true"></div>
+
+      <header class="universe-ui universe-ui--top">
+        <div class="signature" aria-label="Dedicatoria">
+          <span>para mi niña</span>
+          <strong>Verónica</strong>
+        </div>
+        <button id="sound-toggle" class="icon-button" type="button" aria-label="Activar música ambiental" aria-pressed="false" title="Música ambiental">♫</button>
+      </header>
+
+      <aside id="controls-hint" class="controls-hint" aria-live="polite">
+        <span class="desktop-hint">Arrastra para explorar · rueda para acercarte</span>
+        <span class="mobile-hint">Desliza para explorar · pellizca para acercarte · toca una flor</span>
+      </aside>
+
+      <div id="flower-message" class="flower-message" role="status" aria-live="polite" aria-atomic="true">
+        <span class="flower-message__spark" aria-hidden="true">✦</span>
+        <p id="flower-message-text"></p>
+      </div>
+
+      <button id="final-trigger" class="secondary-button final-trigger" type="button">
+        Hay algo más para ti...
+      </button>
+    </section>
+
+    <section id="finale" class="finale" aria-labelledby="finale-title" aria-hidden="true">
+      <div class="finale-nebula" aria-hidden="true"></div>
+      <div class="finale-copy" id="finale-copy">
+        <h2 id="finale-title" class="sr-only">Un último mensaje</h2>
+        <p class="finale-line">Quizá las flores amarillas todavía no estén en mis manos...</p>
+        <p class="finale-line">pero quería construirte un pequeño universo donde pudieran florecer.</p>
+        <p class="finale-line">Porque algunas cosas bonitas...<br>solo necesitan un poco de tiempo.</p>
+        <p class="finale-line finale-line--love">Te quiero mucho, Verónica.<br><em>Mi niña. 💛</em></p>
+      </div>
+
+      <div id="final-bloom" class="final-bloom" aria-hidden="true">
+        <div class="final-flower" aria-hidden="true">
+          <span class="final-flower__halo"></span>
+          <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span>
+          <span class="petal p5"></span><span class="petal p6"></span><span class="petal p7"></span><span class="petal p8"></span>
+          <span class="petal p9"></span><span class="petal p10"></span><span class="petal p11"></span><span class="petal p12"></span>
+          <span class="final-flower__core"></span>
+          <span class="bloom-particle bp1"></span><span class="bloom-particle bp2"></span><span class="bloom-particle bp3"></span>
+          <span class="bloom-particle bp4"></span><span class="bloom-particle bp5"></span><span class="bloom-particle bp6"></span>
+        </div>
+        <p class="final-bloom__title">Esta flor es solo el comienzo.</p>
+        <p class="final-bloom__subtitle">Lo inesperado todavía está por llegar. ✨</p>
+        <button id="return-universe" class="ghost-button" type="button">Volver a mirar las estrellas</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/universe.js" defer></script>
+  <script src="js/flowers.js" defer></script>
+  <script src="js/interaction.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
